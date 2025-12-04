@@ -372,3 +372,11 @@ text-align: center;
   'GRAD' 0,
   'opsz' 24
 }
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+.dark-mode header, .dark-mode footer, .dark-mode .card { 
+  background-color: #1e1e1e;
+  color: #ddd;
+}
