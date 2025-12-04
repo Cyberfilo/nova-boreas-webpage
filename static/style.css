@@ -6,6 +6,8 @@ body {
   scroll-behavior: smooth;
   font-size: 18px;
   min-height: 100vh;
+  background-color: rgb(4, 0, 30); 
+  color: white;                   
 }
 
 main {
@@ -218,7 +220,7 @@ section#about .orospu {
   padding: 1rem 0;
   padding-bottom: 2rem;
   margin-bottom: 1rem;
-  border-bottom: rgba(17, 17, 17, 0.3333333333) solid 1px;
+  border-bottom: rgba(200, 200, 200, 0.2) solid 1px; /* più visibile su sfondo scuro */
 }
 
 section#about .orospu:last-child {
@@ -282,16 +284,7 @@ section#about .orospu .country-flag {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: rgb(4, 0, 30);
-    color: white;
-  }
-
-  section#about .orospu {
-    border-bottom-color: #666;
-  }
-}
+/* Blocchetto prefers-color-scheme RIMOSSO per avere sempre tema scuro */
 
 /*# sourceMappingURL=style.css.map */
 
@@ -307,21 +300,22 @@ section#about .orospu .country-flag {
   margin-right: 10px;
 }
 
-/*this is the text aniamtion*/
+/*this is the text animation*/
 
 .text-slide{
   text-align: center;
 }
 
 .text-slide>div{
-display: inline-block;
-height: 40px;
-line-height: 40px;
-overflow: hidden;
-font-size: 40px;
-font-family: "sabre shark", sans-serif;
-text-align: center;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  font-size: 40px;
+  font-family: "sabre shark", sans-serif;
+  text-align: center;
 }
+
 .text-querio span{
   display: block;
 }
@@ -346,9 +340,11 @@ text-align: center;
   }
   40%{
     top: -80px;
-  }50%{
+  }
+  50%{
     top: -80px;
-  }60%{
+  }
+  60%{
     top: -120px;
   }
   70%{
@@ -363,20 +359,4 @@ text-align: center;
   100%{
     top: 0px;
   }
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-.dark-mode header, .dark-mode footer, .dark-mode .card { 
-  background-color: #1e1e1e;
-  color: #ddd;
 }
