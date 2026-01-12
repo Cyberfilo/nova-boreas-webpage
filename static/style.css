@@ -1,362 +1,515 @@
-body {
-  font-family: "Nunito Sans", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  font-size: 18px;
-  min-height: 100vh;
-  background-color: rgb(4, 0, 30); 
-  color: white;                   
-}
-
-main {
-  margin: 20px;
-}
-
-.navbar ul {
-  list-style-type: none;
-  background-color: rgb(43, 42, 42);
-  padding: 0px;
-  margin: 0px;
-  overflow: hidden;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 15px;
-  display: block;
-  text-align: center;
-}
-
-.navbar a:hover {
-  background-color: rgb(0, 0, 0);
-}
-
-.navbar li {
-  float: left;
-}
-
+/* TODO: make section titles smaller on mobile */
 * {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *::selection {
-  background-color: rgb(16, 0, 121);
-  color: white;
+    background-color: white;
+    color: black;
 }
 
-h1 {
-  margin: 0;
-  font-family: "sabre shark", sans-serif;
-  font-size: 3.5rem;
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    color: white;
+    background-color: rgb(0, 0, 0);
+
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
 }
 
-h2 {
-  font-family: "sabre shark", sans-serif;
-  text-align: center;
-  font-style: italic;
-  font-size: 3rem;
+h1#main-title {
+    color: white;
+
 }
 
-p {
-  font-size: 1.4rem;
-}
-
-a {
-  display: inline-flex;
-  position: relative;
-  color: white;
-  transition: all 0.1s;
-  text-decoration-thickness: 2px;
-}
-
-a .text {
-  position: relative;
-  z-index: 4;
-}
-
-a .bg {
-  flex-grow: 1;
-  position: absolute;
-  background-color: rgb(16, 0, 121);
-  width: 0%;
-  height: 100%;
-  z-index: 3;
-  right: 0;
-  transition: all 0.2s;
-}
-
-a:hover .text {
-  color: white;
-}
-
-a:hover .bg {
-  width: 100%;
-  left: 0;
-}
-
-section#first {
-  /*background: linear-gradient(to right, #f8a902, #f4762d);*/
-  display: flex;
-  flex-flow: row;
-  background: hsl(36, 100%, 79%);
-  background: linear-gradient(25deg, hsl(36, 100%, 79%) 0%, hsl(117, 100%, 84%) 100%);
-  background: black;
-  align-items: center;
-  justify-content: center;
-  padding: 2.5rem;
-  overflow: hidden;
-  position: relative;
-  padding: 10rem;
-  color: white;
-}
-
-section#first * {
-  z-index: 2;
-}
-
-section#first div {
-  flex-grow: 3;
-}
-
-section#first .left {
-  display: flex;
-  max-width: 50%;
-  min-width: 400px;
-  padding: 50px 0;
-  padding-left: 0px;
-}
-
-section#first .left .image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-section#first .left img {
-  border-radius: 8px;
-  width: 100%;
-  max-width: 270px;
-}
-
-section#first .right {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: flex-start;
-  min-width: 200px;
-}
-
-section#first .right .links {
-  margin-top: 5px;
-  display: flex;
-  align-items: center;
-}
-
-section#first .right .instagram-icon {
-  width: 2rem;
-  fill: white;
-  transition: 0.2s ease-out;
-}
-
-section#first .right #instagram-colored {
-  fill: url("#gradient");
-  opacity: 0;
-  position: absolute;
-}
-
-section#first .right #instagram-anchor {
-  height: 2rem;
-  width: 2rem;
-  margin-left: 1rem;
-}
-
-section#first .right #instagram-anchor:hover #instagram-colored {
-  opacity: 1;
-}
-
-section#first .right #instagram-anchor:hover #instagram-mono {
-  opacity: 0;
-}
-
-#powairx-logo {
-  transition: 200ms ease-out;
-}
-
-#bgvideo {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: 1;
-  pointer-events: none;
-  filter: brightness(0.6);
-}
-
-a.aboutus:hover {
-  /* HACK incoming */
-  padding-right: 0px;
-  color: yellow;
-  text-decoration: none;
-}
-
-a.aboutus:hover span {
-  width: 20%;
-  opacity: 1;
-}
-
-section#about {
-  padding: 1rem;
-}
-
-section#about .orospu {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 0;
-  padding-bottom: 2rem;
-  margin-bottom: 1rem;
-  border-bottom: rgba(200, 200, 200, 0.2) solid 1px; /* più visibile su sfondo scuro */
-}
-
-section#about .orospu:last-child {
-  border-bottom: none;
-}
-
-section#about .orospu .info {
-  flex-basis: 20rem;
-  flex-grow: 1;
-}
-
-section#about .orospu .info h3 {
-  font-family: "sabre shark", sans-serif;
-  align-items: end;
-  font-size: 2.5rem;
-}
-
-section#about .orospu img.photo {
-  min-width: 0;
-  max-height: 15rem;
-  margin-right: 1rem;
-  border-radius: 8px;
-}
-
-section#about .orospu .country-flag {
-  width: 2rem;
-}
-
-.aboutus{
-  text-decoration: none;
-}
-
-.star-symbol {
-  font-size: 40px !important;
-}
-
-@media (width < 38rem) {
-  section#about h3 {
+h1#meet-the-team {
     text-align: center;
-  }
+    font-family: "Zalando Sans Expanded", system-ui;
+    font-size: 3rem;
+
 }
 
-@media (width < 50rem) {
-  section#first {
+header#top {
+    min-height: 100vh;
+    /* background-color: #a1a5aa; */
+
+    display: flex;
+    /* background-image: linear-gradient(#0C0035 2px, transparent 2px), linear-gradient(to right, #0C0035 2px, transparent 2px);
+	background-size: 29px 29px;
+	background-color: #252525;	 */
+
+    /* background-color: black; */
+    background:
+        linear-gradient(8deg, hsla(352, 87%, 52%, 0.3) 0%, hsla(180, 100%, 99%, 0) 19%),
+        linear-gradient(-8deg, hsla(25, 100%, 47%, 0.3) 0%, hsla(0, 0%, 100%, 0) 19%), url("https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2371&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: contain;
+    background-attachment: scroll;
+
+    overflow-x: hidden;
+
+    padding: 30px;
+}
+
+header#top h1 {
+    font-size: 5rem;
+    font-family: "Zalando Sans Expanded", system-ui, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    margin: 0;
+}
+
+header#top .left,
+header#top .right {
+    padding: 30px;
+}
+
+header#top .left {
+    flex-grow: 1;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-  }
 
-  section#first .right {
+    font-size: 1.4rem;
+
+}
+
+header#top .left .nb-logo {
+    width: 100%;
+    max-width: 500px;
+}
+
+header#top .right {
+    flex-grow: 1;
+
+    display: flex;
     align-items: center;
-  }
-
-  section#first .right * {
-    text-align: center;
-  }
+    justify-content: center;
+    padding: 0;
 }
 
-@media (width > 60rem) {
-  section#about {
-    padding: 0 10rem;
-  }
+header#top .right #carplaceholder {
+    /* max-width: 300px;
+    max-height: 300px; */
+    width: 100%;
+    max-width: 450px;
+    max-height: 450px;
 }
 
-/* Blocchetto prefers-color-scheme RIMOSSO per avere sempre tema scuro */
+header#top .right .grad-bg {
+    position: absolute;
+    z-index: 0;
+    width: 0;
+}
 
-/*# sourceMappingURL=style.css.map */
+header#top .right canvas {
+    z-index: 2;
+}
+
+
+header#top .links {
+    margin-top: 15px;
+    display: flex;
+
+}
+
+a.starbutton {
+    color: white;
+    border: 1px solid white;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 200ms ease-out;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background: transparent;
+}
+
+a.starbutton:hover {
+    color: black;
+    padding-right: 45px;
+    background-color: white;
+    box-shadow: -0px 0px 12px rgba(255, 255, 255, 0.8);
+}
+
+
+a.starbutton span {
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    transition: all 200ms ease-out;
+}
+
+a.starbutton.normalfagsite:hover {
+    background: linear-gradient(90deg, #d300c5, #ff0069, #ff7a00);
+    color: white;
+    border: 0;
+}
+
+a.starbutton span svg {
+    width: 1.5rem;
+    transform: translateY(2px);
+}
+
+a.starbutton:hover span {
+    right: 12px;
+    opacity: 1;
+}
+
+a.starbutton.filled {
+    color: black;
+    background-color: white;
+    padding-right: 45px;
+}
+
+a.starbutton.filled span {
+    right: 12px;
+    opacity: 1;
+}
+
+/* .material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+} */
 
 .person {
-  display: flex;
-  justify-content: center;
-  min-width: 900px;
-  margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    background-color: black;
+    border-radius: 30px;
+    align-items: center;
+    border: 1px solid gray;
+
+    padding: 20px;
+
+    background-color: #161616;
+
+    max-width: 67rem;
+
+    font-size: 1.25rem;
 }
 
 .person img {
-  width: 200px;
-  margin-right: 10px;
+    max-height: 260px;
+    margin-right: 10px;
+    border-radius: 20px;
 }
 
-/*this is the text animation*/
+.person h4 {
+    display: inline;
+    font-size: 1.2rem;
+    color: white;
 
-.text-slide{
-  text-align: center;
+    font-weight: 400;
+
 }
 
-.text-slide>div{
-  display: inline-block;
-  height: 40px;
-  line-height: 40px;
-  overflow: hidden;
-  font-size: 40px;
-  font-family: "sabre shark", sans-serif;
-  text-align: center;
+.person h3 {
+    font-family: "Zalando Sans Expanded";
+    font-size: 1.9rem;
 }
 
-.text-querio span{
-  display: block;
+.people {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
 }
 
-.text-querio{
-  position: relative;
-  animation: text-animation ease 8s infinite;
+.team-short-par {
+    max-width: 50rem;
+    display: inline-flex;
+    font-size: 1.2rem;
 }
 
-@keyframes text-animation{
-  0%{
+main {
+    margin: 20px;
+}
+
+.navbar {
+    padding: 20px;
+    display: flex;
+    /* ackground-color: rgb(80, 80, 80); */
+    background-color: transparent;
+    /* position: fixed; */
+    /* border: 1px black solid; */
+    position: relative;
+
+    z-index: 4;
+}
+
+.navbar .left {
+    margin-right: auto;
+}
+
+.navbar .left img {
+    width: 10rem;
+}
+
+.navbar .right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .right a {
+    margin-right: 15px;
+}
+
+.navbar .right:last-child {
+    margin-right: 0;
+}
+
+.navbar.mainpage {
+    position: absolute;
+}
+
+.navbar.mainpage .nb-logo {
+    opacity: 0;
+}
+
+.navbar.mainpage {
+    width: 100%;
+    justify-content: right;
+    align-items: right;
+}
+
+section.sect .imgd {
+    display: flex;
+}
+
+section.sect .imgd img {
+    height: 20rem;
+    margin-top: 16rem;
+    margin-bottom: 5rem;
+
+    border-radius: 10px;
+
+    transition: 0.2s all ease-out;
+
+    transform: perspective(100px) rotateY(-3deg);
+}
+section.sect .imgd img:hover {
+    transform: rotateY(0deg) scale(1.2);
+}
+
+section.sect .imgd .imgwrap {
+    align-self: flex-start;
+    position: sticky;
     top: 0;
-  }
-  10%{
+}
+
+section.sect .cont {
+    padding: 3rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 50rem;
+}
+
+section.sect h2 {
+    position: sticky;
     top: 0;
-  }
-  20%{
-    top: -40px;
-  }
-  30%{
-    top: -40px;
-  }
-  40%{
-    top: -80px;
-  }
-  50%{
-    top: -80px;
-  }
-  60%{
-    top: -120px;
-  }
-  70%{
-    top: -120px;
-  }
-  80%{
-    top: -160px;
-  }
-  90%{
-    top: -160px;
-  }
-  100%{
-    top: 0px;
-  }
+
+    font-size: 5rem;
+    margin: 0;
+
+    background-color: black;
+
+    padding: 1rem;
+
+    font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+section.sect p {
+    font-size: 1.5rem;
+}
+
+footer {
+
+    background-color: #151515;
+    color: #888888;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+
+    margin-top: 30rem;
+    padding: 2rem;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+a.link {
+    color: white;
+    text-decoration-color: white;
+    text-decoration-thickness: 2px;
+    transition: 150ms ease-out all;
+}
+
+a.link:hover {
+    background-color: white;
+    color: black;
+    font-weight: 20px;
+    box-shadow: -0px 0px 12px rgba(255, 255, 255, 0.8);
+}
+
+span.colored {
+    color: lightgray;
+}
+
+.instagram-icon {
+    width: 2rem;
+    fill: white;
+    transition: 0.2s ease-out;
+}
+
+#instagram-colored {
+    fill: url("#gradient");
+    opacity: 0;
+    position: absolute;
+}
+
+#instagram-anchor {
+    height: 2rem;
+    width: 2rem;
+}
+
+#instagram-anchor:hover #instagram-colored {
+    opacity: 1;
+}
+
+#instagram-anchor:hover #instagram-mono {
+    opacity: 0;
+}
+
+section.sect.contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+section.sect.contact-us h2 {
+    align-self: stretch;
+}
+
+section.sect.contact-us .email {
+    display: inline-flex;
+    font-size: 4rem;
+
+    margin-left: 3rem;
+
+    background-color: #151515;
+    border: 2px #333333 solid;
+}
+
+section.sect.contact-us .email span {
+    padding: 15px;
+}
+
+section.sect.contact-us .email .copy {
+    width: 6rem;
+    font-size: 1.3rem;
+    border: none;
+    background-color: #222222;
+    color: #666666;
+}
+
+@media screen and (width < 900px) {
+    header#top {
+        flex-direction: column-reverse;
+
+    }
+
+    header#top .left {
+        align-items: center;
+        text-align: center;
+
+        margin-bottom: 3rem;
+    }
+
+    section.sect h2 {
+        font-size: 4rem !important;
+    }
+
+    section.sect.contact-us {}
+
+    section.sect.contact-us .email {
+        margin: 0;
+        font-size: 1.8rem;
+        align-self: center;
+    }
+}
+
+@media screen and (width < 630px) {
+    section.sect h2 {
+        font-size: 3rem !important;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .left {
+        margin-right: 0px !important;
+        margin-bottom: 5px;
+    }
+
+    .navbar .right {
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .navbar .right a {
+        margin-bottom: 10px;
+    }
+
+    .navbar .left {
+        display: none;
+    }
+
+    .person {
+        flex-direction: column;
+    }
+}
+
+@media screen and (width < 1100px) {
+    section.sect .imgd img {
+        display: none;
+    }
+}
+
+.starbutton.insta {
+}
+
+.starbutton.insta:hover {
+    background: linear-gradient(90deg,#d300c5,#ff0069,#ff7a00);
+    border: none;
+    color: white;
+    /* box-shadow: -0px 0px 12px linear-gradient(90deg,#d300c5,#ff0069,#ff7a00); */
+    box-shadow: -5px 0 12px #d300c5, 5px 0 12px #ff7a00;
 }
